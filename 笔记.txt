@@ -156,7 +156,7 @@ http://yun.itheima.com/map/22.html
 
 http://blog.csdn.net/fengshizty/article/details/43086961
 http://www.cnblogs.com/goody9807/p/6450589.html
-https://www.cnblogs.com/syp172654682/p/7689328.html   git
+https://www.cnblogs.com/syp172654682/p/7689328.html
 
 36:   IfabooMCTM   ifaboo-MIOM-OMMG  IfabooModel  
 
@@ -263,4 +263,6 @@ lsnrctl start
  sqlplus  / as sysdba;
 #4  启动
 startup;
+
+
 
