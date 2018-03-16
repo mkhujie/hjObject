@@ -1,0 +1,266 @@
+﻿logout 注销系统的命令
+shutdown –h now  要求系统立即关机 
+shutdown -r now ← 立刻关闭系统并重启 
+reboot 重新启动系统
+su 切换用户权限
+sudo 允许普通用户执行root权限命令
+rz -be 上传文件
+tar -xvf 解压缩
+cp -r apache-tomcat-7.0.65 apache-tomcat-7.0.65:8881  拷贝文件夹及子目录
+cp file1 file2 复制一个文件 
+cp dir/* . 复制一个目录下的所有文件到当前工作目录 
+cp -a /tmp/dir1 . 复制一个目录到当前工作目录 
+cp -a dir1 dir2 复制一个目录 
+ln -s file1 lnk1 创建一个指向文件或目录的软链接 
+ln file1 lnk1 创建一个指向文件或目录的物理链接 
+rm -f file1 删除一个叫做 'file1' 的文件' 
+rmdir dir1 删除一个叫做 'dir1' 的目录' 
+rm -rf dir1 删除一个叫做 'dir1' 的目录并同时删除其内容 
+vim 显示,加文件名可创建文件
+echo “” > filename  清空文件
+i  编辑
+esc键 编辑失效
+:q 退出
+:q!强制退出修改时间
+:x 保存退出
+:w 保存不退出
+:w newfile 保存不退出并新建文件名
+ctrl+c键 强制中断程序的执行
+启动tomcat #   ./startup.sh
+关闭tomcat #   ./shutdown.sh
+查看是否启动成功可以输入ps axuwf
+linux下实时查看tomcat运行日志  tail -f catalina.out    
+查看Tomcat是否关闭  ps -ef|grep java
+干掉进程  kill -9 端口
+mkdir dir1 dir2 同时创建两个目录 
+mkdir -p /tmp/dir1/dir2 创建一个目录树 
+scp -r 文件夹名 用户名@ip地址:/远程服务器路径
+例如：
+scp ./cdcp.war  was@172.16.60.214:/home/was/tomcats/tomcat8884/webapps/
+cat tt.txt 内容查看
+cd - 返回上次所在的目录 
+ls -l 显示文件和目录的详细资料 
+ls -a 显示隐藏文件 
+ls *[0-9]* 显示包含数字的文件名和目录名 
+ls  -lht   将会一一列出当前目录下所有文件的大小，以及所有文件大小的统计总和。或输入ll命令。
+vi /etc/profile
+source /etc/profile  临时生效
+unset TOMCAT_HOME  删除变量或函数
+unset CATALINA_HOME
+mv dir1 new_dir 重命名/移动 一个目录 
+tomcat8881/bin/catalina.sh start
+tomcat8881/bin/catalina.sh stop
+du -sh 查看当前所在目录大小
+du -sk filename 查看指定文件大小
+df 查看硬盘的总容量、已用容量与inode等
+lsblk 就是列出块设备。除了RAM外，以标准的树状输出格式，整齐地显示块设备。 
+history 命令就是历史记录。它显示了在终端中所执行过的所有命令的历史。
+stat 查看文件详细信息
+“touch”命令代表了将文件的访问和修改时间更新为当前时间。touch命令只会在文件不存在的时候才会创建它。
+“chmod”命令就是改变文件的权限：例如读，写，执行权限root@tecmint:~# chmod 777 abc.sh
+Read (r)=4
+Write(w)=2
+Execute(x)=1
+chown 命令就是改变文件拥有者和所在用户组
+例如：root@tecmint:~# chown server:server Binary
+apt-cache search foo - 搜索和"foo"匹配的包
+apt-get upgrade 更新已安装的包
+apt-get remove 软件包名称 - 删除已安装的软件包（保留配置文件） 
+apt-get --purge remove 软件包名称 - 删除已安装包（不保留配置文件
+cal（Calender），它用来显示当前月份或者未来或者过去任何年份中的月份。 
+date 命令使用标准的输出打印当前的日期和时间
+cat主要有三大功能：>表示覆盖，>>表示追加
+1.一次显示整个文件:cat filename
+2.从键盘创建一个文件:cat > filename 只能创建新文件,不能编辑已有文件.
+3.将几个文件合并为一个文件:cat file1 file2 > file
+查看一下/etc/crontab文件：cat /etc/crontab
+如果一个cron任务需要定期而不是按小时,天,周,月来执行,则需要添加/etc/cron.d目录。
+在/etc/rc.d/rc.local这个脚本的末尾加上：/sbin/service crond start
+export命令将使系统在创建每一个新的shell时定义这个变量的一个拷贝。这个过程称之为变量输出。
+echo
+bash开一个子shell时
+
+
+
+VPN:
+vpn ip:118.85.207.95
+User: bigdata03  bigdata04 bigdata05 bigdata06
+pass Op9%9)N9- 
+访问权限：172.16.50.248 、user:shadm1 、 pwd:1qaz@WSX
+vpn 账号：User: bigdata01 pass 9i*-U7t&y1 
+
+内网负载ip:172.16.5.2:8081
+公网ip：118.85.207.76:8081
+域名：bigdata.client.189.cn	
+
+172.16.60.75		"root : vsdf%s2E^+Mch    
+was:dsf@dg3fd24Ue "	i-707-44389-VM	上海	TOMCAT1，TOMCAT2，TOMCAT3，TOMCAT4
+172.16.60.59		 root : UTJ_sG_Mn2s  
+was:lIpsaN@HRz2sad"	i-707-39963-VM	上海	TOMCAT5，TOMCAT6，TOMCAT7，TOMCAT8
+172.16.60.73		"root : *WYtmVuXq4422    
+was:ds8^zrdd2Ihet"	i-707-40004-VM	上海	TOMCAT9，TOMCAT10，TOMCAT11，TOMCAT12
+172.16.60.156		"root : F3ht9-9hsdfwRB    
+was:%l62NsmE6ffsi"		        上海	TOMCAT13，TOMCAT14，TOMCAT15，TOMCAT16
+172.16.60.165		"root : rh#hDCNK9d6v.4    
+was:9rwer%*baffk^D"	i-707-40678-VM	上海	TOMCAT17，TOMCAT18，TOMCAT19，TOMCAT20
+172.16.60.214		"root : ndf&fs%3fK9-2k
+was:gjdC6bxD*csh"	i-707-40681-VM	上海	TOMCAT21，TOMCAT22，TOMCAT23，TOMCAT24
+
+ssh dianqu@10.0.180.39
+hYio89&,5hdqasw
+	
+VPN连接信息：
+IP：https://111.235.158.199:6443/
+用户：张华明（胡杰、陶从奇）
+账号：dianquyun17
+密码：Zxzyyg15@^42
+
+内蒙ftp服务器测试：
+（1）10.141.74.30 ：
+sftp myapp@10.141.74.30
+put /home/was/tomcats/logs/* /home/myapp/web_analysis/
+（2）10.141.74.31：
+sftp ftp_sh@10.141.74.31
+put /home/was/tomcats/logs/app.log /home/ftp_sh/
+
+
+select count(*) from USER_INFO where PASSWORD is null or PASSWORD='';
+select  * from table_name phonename is not null and phonename >'' limit 200;      	
+
+create external table jy_bybankcardex( 9345
+userId string,
+shopId string,
+channelId string,
+REQAGENT string,
+payAmount string,
+phoneNumber string,
+flow string
+)
+PARTITIONED BY ( 
+  `,` string)
+row format delimited
+ FIELDS TERMINATED BY '\t'
+LOCATION
+  'hdfs://ns1/user/dianqu/public/jy_bybankcardex';
+
+
+
+ssh+springMVC+mybites+maven+git+nginx  java基础+javaweb+js+easyUI+bootstrap+jquery   linux sql+数据库+redis   servlet3.0 
+  
+
+http://www.cnblogs.com/xdp-gacl/ 
+
+https://www.zhihu.com/question/56110328
+
+http://yun.itheima.com/map/22.html
+
+http://blog.csdn.net/fengshizty/article/details/43086961
+http://www.cnblogs.com/goody9807/p/6450589.html
+https://www.cnblogs.com/syp172654682/p/7689328.html   git
+
+36:   IfabooMCTM   ifaboo-MIOM-OMMG  IfabooModel  
+
+35 :  DownGoingMIPD   IfabooWebForum  IfabooWebForumManage  
+
+37 :  IfabooMIUP   IfabooWebModel 
+
+10 :   oracle DB
+
+
+
+
+1关闭oracle数据库
+
+[root@dba~]#su - oracle		进入linux系统后，切换到oracle用户
+[oracle@dba~]$sqlplus / as sysdba    进入sqlplus，出现类似下面提示则证明登录正确
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Thu Aug 14 15:31:54 2014
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+SQL>shut immediate		关闭数据库，出现下面提示信息表示正确关闭数据库
+
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+
+
+监听出现故障
+[oracle@dba~]$ lsnrctl stop		在oracle用户下执行此命令停止监听
+
+
+
+2 关闭linux系统！！！注意，一定要在oracle数据库完全关闭后再关闭linux系统！！！
+
+SQL>			在sql下直接按ctrl+d 退回到oracle用户
+[oracle@dba~]$	在oracle用户下直接按ctrl+d退回到root用户
+[root@dba~]#halt  在root用户下直接输入左侧命令即可关闭linux系统
+
+至此，oracle和linux系统的关闭过程结束
+
+
+
+
+
+1启动oracle数据库
+
+[root@dba~]#su - oracle		进入linux系统后，切换到oracle用户
+[oracle@dba~]$sqlplus / as sysdba    进入sqlplus，出现类似下面提示则证明登录正确
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Thu Aug 14 15:31:54 2014
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+SQL>startup		启动数据库
+Total System Global Area 1157627904 bytes
+Fixed Size		    1219016 bytes
+Variable Size		  335545912 bytes
+Database Buffers	  805306368 bytes
+Redo Buffers		   15556608 bytes
+Database mounted.
+Database opened.
+
+
+
+
+2启动监听
+
+在上一步启动数据库后
+
+SQL>在sql下直接按ctrl+d 退回到oracle用户
+[oracle@dba~]$ lsnrctl start 启动监听，出现类似下面提示并以The command completed successfully  结尾则说明监听启动正确
+LSNRCTL for Linux: Version 10.2.0.1.0 - Production on 14-AUG-2014 15:36:55
+
+
+
+select username,count(username) from v$session where username is not null group by username;
+
+启动nginx
+usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+重启nginx，进入sbin目录
+ ./nginx -s reload
+
+
+启动linux系统：reboot
+
+
+oracle重启四个步骤：
+# 1切换Oracle 用户
+su - oracle
+#2 启动监听
+lsnrctl start
+#3 连接dba
+ sqlplus  / as sysdba;
+#4  启动
+startup;
+
